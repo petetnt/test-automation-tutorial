@@ -2,7 +2,7 @@ export default function ForgotPassword() {
   return (
     <>
       <div className="text-center bg-gray-50 text-gray-800 py-20 px-6">
-        <h1 className="font-medium leading-tight text-5xl mt-0 mb-2 text-blue-600">My awesome service</h1>
+        <h1 className="font-medium leading-tight text-5xl mt-0 mb-2 text-blue-600">My awesome app :D</h1>
       </div>
 
       <section className="">

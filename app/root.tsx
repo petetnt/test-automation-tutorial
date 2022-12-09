@@ -16,7 +16,7 @@ export function links() {
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "My awesome service",
+  title: "My awesome app :D",
   viewport: "width=device-width,initial-scale=1",
 });
 

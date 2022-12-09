@@ -1,8 +1,20 @@
+import type { ActionArgs } from "@remix-run/node";
+import { redirect } from "@remix-run/node";
+
+export const action = async ({ request }: ActionArgs) => {
+  const formData = await request.formData();
+
+  if (formData) {
+    return {};
+  }
+  return redirect(`/dashboard`);
+};
+
 export default function Index() {
   return (
     <>
       <div className="text-center bg-gray-50 text-gray-800 py-20 px-6">
-        <h1 className="font-medium leading-tight text-5xl mt-0 mb-2 text-blue-600">My awesome service</h1>
+        <h1 className="font-medium leading-tight text-5xl mt-0 mb-2 text-blue-600">My awesome app :D</h1>
       </div>
 
       <section className="">
@@ -20,7 +32,7 @@ export default function Index() {
               />
             </div>
             <div className="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
-              <form>
+              <form method="post" action="/">
                 <div className="flex flex-row items-center justify-center lg:justify-start">
                   <p className="text-lg mb-0 mr-4">Sign in</p>
                 </div>
