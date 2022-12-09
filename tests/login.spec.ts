@@ -32,7 +32,7 @@ test('User should see an error message when logging in with invalid credentials'
   const submitButton = page.getByRole('button', { name: 'Login' });
   await submitButton.click();
 
-  // Ensure that we are now on dashboard!
+  // Ensure that the error message is visible
   await expect(page.locator("text=Email or password was wrong")).toBeVisible();
 });
 
